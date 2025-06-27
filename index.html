@@ -13,12 +13,25 @@
             <p>Get current weather and 5-day forecast for any city</p>
         </div>
 
+        <div class="controls-container">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <div class="temp-toggle">
+                <button class="temp-btn active" id="celsiusBtn">°C</button>
+                <button class="temp-btn" id="fahrenheitBtn">°F</button>
+            </div>
+        </div>
+
         <div class="search-container">
             <div class="search-box">
                 <input type="text" class="search-input" placeholder="Enter city name..." id="cityInput">
                 <button class="search-btn" id="searchBtn">Search</button>
             </div>
             <button class="location-btn" id="locationBtn">Use My Location</button>
+        </div>
+
+        <div class="recent-searches" id="recentSearches" style="display: none;">
+            <h4>Recent Searches:</h4>
+            <div class="recent-list" id="recentList"></div>
         </div>
 
         <div class="loading" id="loading">Loading weather data...</div>
@@ -30,6 +43,10 @@
                 <div class="weather-icon" id="weatherIcon">☀️</div>
                 <div class="temperature" id="temperature">22°C</div>
                 <div class="description" id="description">Sunny</div>
+                <div class="detail-item">
+                    <div class="label">Current Time</div>
+                    <div class="value" id="currentTime">--:-- --</div>
+                </div>
                 <div class="weather-details">
                     <div class="detail-item">
                         <div class="label">Feels Like</div>
